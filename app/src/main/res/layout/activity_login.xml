@@ -97,7 +97,7 @@
         android:layout_alignStart="@+id/ib_facebook"
         android:layout_alignRight="@+id/ib_twitter"
         android:layout_alignEnd="@+id/ib_twitter"
-        android:onClick="entrar (Login)" />
+        android:onClick="entrar" />
 
     <TextView
         android:text="Olvidaste tu Contraseña?."
@@ -111,17 +111,6 @@
         android:layout_alignEnd="@+id/ib_gmail"
         android:onClick="recuperarPsw"
         android:textIsSelectable="true"/>
-
-    <Button
-        android:text="Entrar"
-        android:layout_height="wrap_content"
-        android:background="#B0BEC5"
-        android:id="@+id/btn_entrar"
-        android:layout_width="110sp"
-        android:layout_below="@+id/cb_recordar_contraseña"
-        android:layout_alignLeft="@+id/tv_olvidaste_contraseña"
-        android:layout_alignStart="@+id/tv_olvidaste_contraseña"
-        android:onClick="entrar" />
 
     <Button
         android:text="Registrarse"
@@ -157,4 +146,15 @@
         android:layout_width="270sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Entrar"
+        android:layout_height="wrap_content"
+        android:background="#B0BEC5"
+        android:id="@+id/btn_entrar"
+        android:layout_width="110sp"
+        android:onClick="entrar"
+        android:layout_below="@+id/cb_recordar_contraseña"
+        android:layout_alignLeft="@+id/tv_olvidaste_contraseña"
+        android:layout_alignStart="@+id/tv_olvidaste_contraseña" />
 </RelativeLayout>
