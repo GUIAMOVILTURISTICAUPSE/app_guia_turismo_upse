@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.leonardo.aplicacion.Login">
+
+    <TextView
+        android:text="Usuario:"
+        android:textColor="#263238"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_login"
+        android:layout_alignLeft="@+id/tv_login"
+        android:layout_alignStart="@+id/tv_login"
+        android:layout_marginTop="23dp"
+        android:id="@+id/tv_usuario" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/tv_usuario"
+        android:layout_alignLeft="@+id/tv_usuario"
+        android:layout_alignStart="@+id/tv_usuario"
+        android:id="@+id/et_usuario"
+        android:layout_alignRight="@+id/tv_login"
+        android:layout_alignEnd="@+id/tv_login" />
+
+    <TextView
+        android:text="Contraseña:"
+        android:textColor="#263238"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_usuario"
+        android:layout_alignLeft="@+id/et_usuario"
+        android:layout_alignStart="@+id/et_usuario"
+        android:id="@+id/tv_psw" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@+id/tv_psw"
+        android:layout_alignLeft="@+id/tv_psw"
+        android:layout_alignStart="@+id/tv_psw"
+        android:id="@+id/et_contraseña"
+        android:layout_alignRight="@+id/et_usuario"
+        android:layout_alignEnd="@+id/et_usuario" />
+
+    <CheckBox
+        android:text="Recordar Contraseña?."
+        android:textColor="#263238"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_contraseña"
+        android:layout_alignLeft="@+id/et_contraseña"
+        android:layout_alignStart="@+id/et_contraseña"
+        android:id="@+id/cb_recordar_contraseña" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/gmail"
+        android:layout_below="@+id/btn_entrar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:id="@+id/ib_gmail" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/twitter"
+        android:layout_alignTop="@+id/ib_gmail"
+        android:layout_alignRight="@+id/btn_registrarse"
+        android:layout_alignEnd="@+id/btn_registrarse"
+        android:id="@+id/ib_twitter" />
+
+    <Button
+        android:text="Ingrese como Invitado!."
+        android:textAlignment="center"
+        android:background="#B0BEC5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:id="@+id/btn_invitado"
+        android:layout_below="@+id/ib_gmail"
+        android:layout_alignLeft="@+id/ib_facebook"
+        android:layout_alignStart="@+id/ib_facebook"
+        android:layout_alignRight="@+id/ib_twitter"
+        android:layout_alignEnd="@+id/ib_twitter"
+        android:onClick="entrar (Login)" />
+
+    <TextView
+        android:text="Olvidaste tu Contraseña?."
+        android:layout_width="wrap_content"
+        android:textColor="#263238"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:id="@+id/tv_olvidaste_contraseña"
+        android:layout_below="@+id/btn_invitado"
+        android:layout_alignRight="@+id/ib_gmail"
+        android:layout_alignEnd="@+id/ib_gmail"
+        android:onClick="recuperarPsw"
+        android:textIsSelectable="true"/>
+
+    <Button
+        android:text="Entrar"
+        android:layout_height="wrap_content"
+        android:background="#B0BEC5"
+        android:id="@+id/btn_entrar"
+        android:layout_width="110sp"
+        android:layout_below="@+id/cb_recordar_contraseña"
+        android:layout_alignLeft="@+id/tv_olvidaste_contraseña"
+        android:layout_alignStart="@+id/tv_olvidaste_contraseña"
+        android:onClick="entrar" />
+
+    <Button
+        android:text="Registrarse"
+        android:background="#B0BEC5"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_registrarse"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_width="110sp"
+        android:layout_below="@+id/cb_recordar_contraseña"
+        android:layout_alignRight="@+id/et_contraseña"
+        android:layout_alignEnd="@+id/et_contraseña"
+        android:onClick="registrar" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/facebook"
+        android:id="@+id/ib_facebook"
+        android:layout_above="@+id/btn_invitado"
+        android:layout_alignLeft="@+id/btn_entrar"
+        android:layout_alignStart="@+id/btn_entrar" />
+
+    <TextView
+        android:text="LOGIN"
+        android:textStyle="bold"
+        android:textColor="#263238"
+        android:textAlignment="center"
+        android:background="#B0BEC5"
+        android:textSize="27sp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_login"
+        android:layout_width="270sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_registrarse"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.leonardo.aplicacion.Registrarse">
+
+    <TextView
+        android:text="REGISTRARSE"
+        android:layout_width="270sp"
+        android:textAlignment="center"
+        android:background="#B0BEC5"
+        android:textSize="23sp"
+        android:textColor="#263238"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tv_registrarse" />
+
+    <TextView
+        android:text="Usuario:"
+        android:textColor="#263238"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_registrarse"
+        android:layout_alignLeft="@+id/tv_registrarse"
+        android:layout_alignStart="@+id/tv_registrarse"
+        android:layout_marginTop="26dp"
+        android:id="@+id/tv_usuario" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/tv_usuario"
+        android:layout_alignLeft="@+id/tv_usuario"
+        android:layout_alignStart="@+id/tv_usuario"
+        android:id="@+id/et_usuario"
+        android:layout_alignRight="@+id/tv_registrarse"
+        android:layout_alignEnd="@+id/tv_registrarse" />
+
+    <TextView
+        android:text="Contraseña:"
+        android:textColor="#263238"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_usuario"
+        android:layout_alignStart="@+id/et_usuario"
+        android:id="@+id/tv_contraseña"
+        android:layout_below="@+id/et_usuario" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@+id/tv_contraseña"
+        android:layout_alignLeft="@+id/tv_contraseña"
+        android:layout_alignStart="@+id/tv_contraseña"
+        android:id="@+id/et_psw"
+        android:layout_alignRight="@+id/et_usuario"
+        android:layout_alignEnd="@+id/et_usuario" />
+
+    <TextView
+        android:text="Confirmar Contraseña:"
+        android:textColor="#263238"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_psw"
+        android:layout_alignLeft="@+id/et_psw"
+        android:layout_alignStart="@+id/et_psw"
+        android:id="@+id/tv_confirmar_psw" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@+id/tv_confirmar_psw"
+        android:layout_alignLeft="@+id/tv_confirmar_psw"
+        android:layout_alignStart="@+id/tv_confirmar_psw"
+        android:id="@+id/et_confirmar_psw"
+        android:layout_alignRight="@+id/et_psw"
+        android:layout_alignEnd="@+id/et_psw" />
+
+    <TextView
+        android:text="Correo:"
+        android:textColor="#263238"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cb_mostrar_psw"
+        android:layout_alignLeft="@+id/et_confirmar_psw"
+        android:layout_alignStart="@+id/et_confirmar_psw"
+        android:id="@+id/tv_correo" />
+
+    <CheckBox
+        android:text="Mostrar Contraseña!."
+        android:textColor="#263238"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_mostrar_psw"
+        android:layout_below="@+id/et_confirmar_psw"
+        android:layout_alignLeft="@+id/tv_correo"
+        android:layout_alignStart="@+id/tv_correo" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:layout_below="@+id/tv_correo"
+        android:layout_alignLeft="@+id/tv_correo"
+        android:layout_alignStart="@+id/tv_correo"
+        android:id="@+id/et_correo"
+        android:layout_alignRight="@+id/et_confirmar_psw"
+        android:layout_alignEnd="@+id/et_confirmar_psw" />
+
+    <TextView
+        android:text="País:"
+        android:textColor="#263238"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_correo"
+        android:layout_alignLeft="@+id/et_correo"
+        android:layout_alignStart="@+id/et_correo"
+        android:id="@+id/tv_pais" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_pais"
+        android:layout_alignLeft="@+id/tv_pais"
+        android:layout_alignStart="@+id/tv_pais"
+        android:id="@+id/sp_lista_paises"
+        android:layout_alignRight="@+id/et_correo"
+        android:layout_alignEnd="@+id/et_correo" />
+
+    <Button
+        android:text="Listo"
+        android:background="#B0BEC5"
+        android:layout_width="110sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:id="@+id/btn_registro_listo"
+        android:layout_below="@+id/sp_lista_paises"
+        android:layout_centerHorizontal="true"
+        android:onClick="listo" />
+</RelativeLayout>
