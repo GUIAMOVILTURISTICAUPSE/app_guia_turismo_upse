@@ -17,7 +17,13 @@
         </activity>
         <activity android:name=".Registrarse" />
         <activity android:name=".RecuperarPsw" />
-        <activity android:name=".Bienvenido"></activity>
+        <activity android:name=".Bienvenido" />
+        <activity android:name=".Sendero" />
+        <activity android:name=".RecursosAnimados" />
+        <activity android:name=".Galeria" />
+        <activity android:name=".Comentarios" />
+        <activity android:name=".Atractivos" />
+        <activity android:name=".Transporte"></activity>
     </application>
 
 </manifest>
