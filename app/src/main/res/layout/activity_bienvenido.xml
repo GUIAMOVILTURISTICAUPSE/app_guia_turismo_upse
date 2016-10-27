@@ -20,4 +20,5 @@
         android:layout_height="400sp"
         android:clickable="true"
         android:onClick="salir" />
+
 </RelativeLayout>

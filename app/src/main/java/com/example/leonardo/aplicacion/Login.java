@@ -26,4 +26,8 @@ public class Login extends AppCompatActivity {
         Intent intent=new Intent(this,Bienvenido.class);
         startActivity(intent);
     }
+    public void sendero(View view){
+        Intent intent=new Intent(this,Sendero.class);
+        startActivity(intent);
+    }
 }
