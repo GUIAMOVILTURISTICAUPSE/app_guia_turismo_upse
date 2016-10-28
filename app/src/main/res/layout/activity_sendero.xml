@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.leonardo.aplicacion.Sendero">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SENDERO"
+        android:id="@+id/sendero"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:id="@+id/iv1"
+        android:padding="1dp"
+        android:layout_below="@+id/sendero"
+        android:layout_toLeftOf="@+id/galeria"
+        android:layout_toStartOf="@+id/galeria" />
+
+    <TextView
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvdistancia"
+        android:text="Distancia: "
+        android:layout_below="@+id/iv1"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/tvduracion"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        />
+
+    <TextView
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvduracion"
+        android:text="Duracion: "
+        android:layout_below="@+id/iv1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:text="Aquiiii instrucciones...!!!"
+        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tv_instruc"
+        android:layout_below="@+id/tvduracion"
+        android:layout_above="@+id/tv_transportes"
+         />
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_atracciones"
+        android:layout_above="@+id/listaatractivos"
+        android:text="LISTA ATRACTIVOS:"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="8dp"
+        android:layout_below="@+id/tv_instruc"
+        android:layout_marginStart="8dp"
+        />
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_transportes"
+        android:layout_above="@+id/listatransportes"
+        android:text="TRANSPORTES:"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        />
+    <ListView
+        android:id="@+id/listaatractivos"
+        android:layout_width="190dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/b_comentarios"
+        android:layout_alignParentRight="true"
+        />
+    <ListView
+        android:id="@+id/listatransportes"
+        android:layout_width="190dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/b_recursosAnimados"
+        android:layout_alignRight="@+id/tv_transportes"
+        android:layout_alignEnd="@+id/tv_transportes" />
+
+    <Button
+        android:text="RECURSOS ANIMADOS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b_recursosAnimados"
+        android:onClick="recursosAnimados"
+        android:layout_alignBottom="@+id/galeria"
+        android:layout_toRightOf="@+id/b_comentarios"
+        android:textSize="12sp" />
+
+    <Button
+        android:text="GALERIA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/galeria"
+        android:onClick="galeria"
+        android:layout_above="@+id/menuinformacion"
+        android:layout_toRightOf="@+id/b_recursosAnimados"
+        android:layout_toEndOf="@+id/b_recursosAnimados"
+        android:textSize="12sp" />
+
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:id="@+id/menuinformacion"
+        android:headerDividersEnabled="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Comentarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b_comentarios"
+        android:onClick="comentario"
+        android:textSize="12sp"
+        android:layout_alignBaseline="@+id/b_recursosAnimados"
+        android:layout_alignBottom="@+id/b_recursosAnimados"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
+
