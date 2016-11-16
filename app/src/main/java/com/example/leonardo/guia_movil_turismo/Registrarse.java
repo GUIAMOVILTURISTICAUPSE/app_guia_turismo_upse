@@ -40,7 +40,8 @@ public class Registrarse extends AppCompatActivity {
         {
             if(password.equals(passwordConfirmation))
             {
-                Usuario usuarioIngresado = new Usuario(username, password);
+                Usuario usuarioIngresado = new Usuario(username);
+                usuarioIngresado.setPasswordHash(password);
                 //dbaUsuario.put(username,usuarioIngresado);
                 dbaUsuario.save(usuarioIngresado);
                 Toast.makeText(this,"Usuario Resgitrado correctamente", Toast.LENGTH_LONG).show();

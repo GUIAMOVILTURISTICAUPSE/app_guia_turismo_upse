@@ -2,7 +2,6 @@ package data_strategy;
 
 import android.app.Activity;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.couchbase.lite.CouchbaseLiteException;
 import com.couchbase.lite.Database;
@@ -15,7 +14,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 
 //import com.couchbase.client.CouchbaseClient;
@@ -48,7 +46,7 @@ public class CouchbaseManager<K, V>
         this.act = act;
         AndroidContext context = new AndroidContext(act.getApplicationContext());
         this.valueTypeParameterClass = valueClass;
-
+        configurarMapper();
 
         try {
 
@@ -66,6 +64,18 @@ public class CouchbaseManager<K, V>
         }
     }
 
+    private void configurarMapper()
+    {
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,false);
+        mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+    }
+
+    /**
+     * Obtiene cualquier documento de la base (si existe) y lo deserializa a su clase
+     * adecuada a traves de Genericos.
+     * @param key
+     * @return
+     */
     public V get(K key)
     {
         //Convertir la Llave a String...
@@ -80,18 +90,8 @@ public class CouchbaseManager<K, V>
 
             if (doc != null)
             {
-                /*
-                Map m = doc.getProperties();
-                HashMap<K,V> hMap =  (m instanceof HashMap)
-                        ? (HashMap) m
-                        : new HashMap<K,V>(m);
-                res = (V)hMap;
-                */
                 try {
                     Map<String, Object> map = doc.getProperties();
-                    HashMap<String, Object> copy = new HashMap<String, Object>(map);
-                    //List<V> pojos = mapper.convertValue(map, new TypeReference<List<V>>() {  });
-                    //res = pojos.get(0);
                     res = mapper.convertValue(map, valueTypeParameterClass);
                 }catch (Exception e)
                 {
@@ -99,40 +99,18 @@ public class CouchbaseManager<K, V>
                     Log.e("ErrorCouchbase", "Error de conversion de Map: " +
                             e.getMessage(), e);
                 }
-
-                //res = (V)doc.getProperties();
-                //res = mapper.convertValue(doc.getProperties(),valueTypeParameterClass);
-                //res = gson.fromJson(doc.toString(), valueTypeParameterClass);
             }
         }
         return res;
     }
 
-    public void put(K key, V value)
-    {
-        int ttl = 0;
-        String llave = key.toString();
-        Map<String, Object> docContent = new HashMap<String, Object>();
-        docContent.put("objeto", value);
-        Log.i("CouchDB-Save", "docContent: " + String.valueOf(docContent));
-
-        Document doc = new Document(getDbCouchbase(), llave);
-        try {
-            doc.putProperties(docContent);
-            Log.i("CouchDB-Save", "Documento Guardado con Exito");
-            Toast.makeText(act, "Exito al grabar a CouchBaseLite", Toast.LENGTH_SHORT).show();
-        } catch (CouchbaseLiteException e) {
-            e.printStackTrace();
-            Log.i("CouchDB-Save", "Failed to write document to Couchbase database!: "+ e.getMessage());
-        }
-        //cbClient.set(key.toString(), ttl, gson.toJson(value,valueTypeParameterClass));
-        //cacheMan.set(key, ttl, gson.toJson(value, valueTypeParameterClass));
-    }
-
+    /**
+     * Persiste cualquier objeto serializable e
+     * @param o
+     */
     public void save(Object o)
     {
-        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,false);
-        mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+
         Map<String, Object> props = mapper.convertValue(o, Map.class);
         String id = (String) props.get("_id");
 

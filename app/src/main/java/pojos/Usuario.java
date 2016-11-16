@@ -105,6 +105,6 @@ public class Usuario {
 
     public boolean verificarPassword(String otherPassword)
     {
-        return this.getPasswordHash()==otherPassword;
+        return this.getPasswordHash().equals(otherPassword.trim());
     }
 }
