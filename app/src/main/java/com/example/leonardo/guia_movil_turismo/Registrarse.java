@@ -44,7 +44,7 @@ public class Registrarse extends AppCompatActivity {
                 usuarioIngresado.setPasswordHash(password);
                 //dbaUsuario.put(username,usuarioIngresado);
                 dbaUsuario.save(usuarioIngresado);
-                Toast.makeText(this,"Usuario Resgitrado correctamente", Toast.LENGTH_LONG).show();
+                Toast.makeText(this,"Usuario Registrado correctamente", Toast.LENGTH_LONG).show();
 
                 Intent intent=new Intent(this,Bienvenido.class);
                 startActivity(intent);

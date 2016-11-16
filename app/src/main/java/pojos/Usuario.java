@@ -107,4 +107,10 @@ public class Usuario {
     {
         return this.getPasswordHash().equals(otherPassword.trim());
     }
+
+    public void hashPassword()
+    {
+        //TODO Crear funcion de Hashing para no almacenar la contrasena en seco
+        //Mecanismo de Hash
+    }
 }
