@@ -1,18 +1,18 @@
-package com.example.leonardo.aplicacion;
+package com.example.leonardo.guia_movil_turismo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class Registrarse extends AppCompatActivity {
+public class Bienvenido extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrarse);
+        setContentView(R.layout.activity_bienvenido);
     }
 
-    public void listo(View view){
+    public void salir(View view){
         finish();
     }
 }

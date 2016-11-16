@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.leonardo.aplicacion.Registrarse">
+    tools:context="com.example.leonardo.guia_movil_turismo.Registrarse">
 
     <TextView
         android:text="REGISTRARSE"
@@ -64,19 +64,9 @@
         android:layout_below="@+id/tv_contraseña"
         android:layout_alignLeft="@+id/tv_contraseña"
         android:layout_alignStart="@+id/tv_contraseña"
-        android:id="@+id/et_psw"
+        android:id="@+id/et_contraseña"
         android:layout_alignRight="@+id/et_usuario"
         android:layout_alignEnd="@+id/et_usuario" />
-
-    <TextView
-        android:text="Confirmar Contraseña:"
-        android:textColor="#263238"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/et_psw"
-        android:layout_alignLeft="@+id/et_psw"
-        android:layout_alignStart="@+id/et_psw"
-        android:id="@+id/tv_confirmar_psw" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -152,4 +142,14 @@
         android:layout_below="@+id/sp_lista_paises"
         android:layout_centerHorizontal="true"
         android:onClick="listo" />
+
+    <TextView
+        android:text="Confirmar Contraseña:"
+        android:textColor="#263238"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_confirmar_psw"
+        android:layout_below="@+id/et_contraseña"
+        android:layout_alignLeft="@+id/et_contraseña"
+        android:layout_alignStart="@+id/et_contraseña" />
 </RelativeLayout>

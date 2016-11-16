@@ -1,13 +1,13 @@
-package com.example.leonardo.aplicacion;
+package com.example.leonardo.guia_movil_turismo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Atractivos extends AppCompatActivity {
+public class Comentarios extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_atractivos);
+        setContentView(R.layout.activity_comentarios);
     }
 }

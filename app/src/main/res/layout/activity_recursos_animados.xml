@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.leonardo.aplicacion.RecursosAnimados">
+    tools:context="com.example.leonardo.guia_movil_turismo.RecursosAnimados">
 
     <TextView
         android:text="Titulo animacion"

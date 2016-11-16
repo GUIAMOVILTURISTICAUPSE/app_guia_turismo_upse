@@ -1,4 +1,4 @@
-package com.example.leonardo.aplicacion;
+package com.example.leonardo.guia_movil_turismo;
 
 import org.junit.Test;
 
