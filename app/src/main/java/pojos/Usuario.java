@@ -113,4 +113,11 @@ public class Usuario {
         //TODO Crear funcion de Hashing para no almacenar la contrasena en seco
         //Mecanismo de Hash
     }
+
+
+    @Override
+    public String toString() {
+        return "Usuario [userName=" + userName + ", email=" + email + ", nombre=" + nombre + ", apellidos=" + apellidos
+                + ", passwordHash=" + passwordHash + "]";
+    }
 }
