@@ -14,11 +14,20 @@
     <ImageView
         android:layout_width="match_parent"
         app:srcCompat="@mipmap/beach"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/imageView"
         android:layout_height="400sp"
         android:clickable="true"
         android:onClick="salir" />
+
+    <Button
+        android:text="IR A RECURSO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_ir_Recurso"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="ir_recurso" />
 
 </RelativeLayout>
