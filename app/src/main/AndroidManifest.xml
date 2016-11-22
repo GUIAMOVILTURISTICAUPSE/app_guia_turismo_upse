@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.leonardo.guia_movil_turismo">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
+        android:name = ".guia_movil_app"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,13 +22,17 @@
         <activity android:name=".Registrarse" />
         <activity android:name=".RecuperarPsw" />
         <activity android:name=".Bienvenido" />
-        <activity android:name=".Recurso"></activity>
+        <activity android:name=".Recurso" />
         <activity android:name=".Sendero" />
         <activity android:name=".RecursosAnimados" />
         <activity android:name=".Galeria" />
         <activity android:name=".Comentarios" />
         <activity android:name=".Atractivos" />
-        <activity android:name=".Transporte"></activity>
-   </application>
+        <activity android:name=".Transporte" />
+        <activity android:name=".AcercaDeTi" />
+        <activity android:name=".PerfilUsuario" />
+        <activity android:name=".DatosPersonales" />
+        <activity android:name=".FotoUsuario"></activity>
+    </application>
 
 </manifest>
