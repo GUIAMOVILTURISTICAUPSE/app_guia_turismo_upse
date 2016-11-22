@@ -14,7 +14,6 @@
     <ImageView
         android:layout_width="match_parent"
         app:srcCompat="@mipmap/beach"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/imageView"
         android:layout_height="400sp"
@@ -30,5 +29,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:id="@+id/btn_cerrarSesion" />
+
 
 </RelativeLayout>

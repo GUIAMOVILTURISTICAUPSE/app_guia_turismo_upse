@@ -30,4 +30,10 @@ public class Bienvenido extends AppCompatActivity {
     public void salir(View view){
         finish();
     }
+
+    public void ir_recurso(View view){
+        Intent i=new Intent(this,Recurso.class);
+        startActivity(i);
+    }
+
 }
