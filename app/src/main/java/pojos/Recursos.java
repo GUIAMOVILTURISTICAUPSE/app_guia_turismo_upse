@@ -1,10 +1,5 @@
 package pojos;
 
-import android.media.Image;
-
-import com.example.leonardo.guia_movil_turismo.Recurso;
-import com.example.leonardo.guia_movil_turismo.Sendero;
-
 import java.util.ArrayList;
 
 /**
@@ -12,6 +7,12 @@ import java.util.ArrayList;
  */
 
 public class Recursos {
+
+    //Campos para couchdb
+    private String _id;
+
+
+    private String _rev;
     //id
     private String nombre;
     private String descripcion;
@@ -148,13 +149,38 @@ public class Recursos {
 
     }
 
+    public String get_id() {
+        return _id;
+    }
 
+    public void set_id(String _id) {
+        this._id = _id;
+    }
 
+    public String get_rev() {
+        return _rev;
+    }
 
+    public void set_rev(String _rev) {
+        this._rev = _rev;
+    }
 
-
-
-
-
-
+    @Override
+    public String toString() {
+        return "Recursos{" +
+                "_id='" + _id + '\'' +
+                ", _rev='" + _rev + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", informacionGeneral='" + informacionGeneral + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", costoRecursos=" + costoRecursos +
+                ", facilidadRecurso=" + facilidadRecurso +
+                ", recomendacion=" + recomendacion +
+                ", imagen=" + imagen +
+                ", sendero=" + sendero +
+                ", idiomasInformac=" + idiomasInformac +
+                ", ranking=" + ranking +
+                '}';
+    }
 }

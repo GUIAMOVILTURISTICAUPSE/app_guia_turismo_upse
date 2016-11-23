@@ -114,6 +114,9 @@ public class CouchbaseManager<K, V>
         Map<String, Object> props = mapper.convertValue(o, Map.class);
         String id = (String) props.get("_id");
 
+        //Ponerle el tipo de Documento que estamos guardando para poder buscarlo con vistas luego
+        props.put("documentClass", valueTypeParameterClass.toString());
+
         Document document;
         if(id == null)
         {

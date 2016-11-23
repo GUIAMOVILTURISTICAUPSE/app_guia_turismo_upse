@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="118dp"
             app:srcCompat="@mipmap/m1"
-            android:id="@+id/imageView2" />
+            android:id="@+id/imgPrincipalRecurso" />
     </LinearLayout>
 
     <RatingBar
@@ -164,26 +164,6 @@
         android:layout_toLeftOf="@+id/img_Senderos"
         android:layout_toStartOf="@+id/img_Senderos" />
 
-    <ScrollView
-        android:layout_height="100sp"
-        android:layout_width="250sp"
-        android:id="@+id/scroll_descripcion"
-        android:scrollbarStyle="outsideInset"
-        android:layout_above="@+id/tv_direccion"
-        android:layout_toLeftOf="@+id/tv_detalle_dist"
-        android:layout_alignLeft="@+id/img_Contactar"
-        android:layout_alignStart="@+id/img_Contactar"
-        android:layout_below="@+id/layout_imagenes">
-
-
-        <TextView
-            android:text="Descripcion del recurso."
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_descrip_recurso"
-            android:textSize="12sp" />
-    </ScrollView>
-
     <TextView
         android:text="Distancia:"
         android:layout_width="wrap_content"
@@ -234,5 +214,23 @@
         android:layout_alignBottom="@+id/img_usuario"
         android:layout_toRightOf="@+id/img_usuario"
         android:layout_toEndOf="@+id/img_usuario" />
+
+    <ScrollView
+        android:layout_height="100sp"
+        android:layout_width="250sp"
+        android:id="@+id/scroll_descripcion"
+        android:scrollbarStyle="outsideInset"
+        android:layout_below="@+id/layout_imagenes"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/tv_direccion">
+
+
+        <TextView
+            android:text="Descripcion del recurso."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_descrip_recurso"
+            android:textSize="12sp" />
+    </ScrollView>
 
 </RelativeLayout>
