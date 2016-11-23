@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_perfil_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        tools:context="com.example.leonardo.guia_movil_turismo.PerfilUsuario">
+
+        <TextView
+            android:text="Nombre de Usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textSize="18dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_nombreUsuario" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/usuario"
+            android:id="@+id/iv_FotoPerfil"
+            android:layout_below="@+id/tv_nombreUsuario"
+            android:layout_centerHorizontal="true"
+            android:onClick="cambiarFoto" />
+        <TextView
+            android:text="Datos Personales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_FotoPerfil"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:id="@+id/textView2" />
+        <TextView
+            android:text="Usuario:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvUsuario"
+            android:layout_alignBaseline="@+id/et_nombre_usuario"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="ByronRam20"
+            android:ems="10"
+            android:id="@+id/et_nombre_usuario"
+            android:focusable="true"
+            android:cursorVisible="true"
+            android:textSize="14sp"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignLeft="@+id/et_nombre"
+            android:layout_alignStart="@+id/et_nombre" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Nombres"
+            android:ems="10"
+            android:layout_below="@+id/et_nombre_usuario"
+            android:layout_toRightOf="@+id/textView4"
+            android:focusable="true"
+            android:cursorVisible="true"
+            android:nextFocusLeft="@id/et_nombre_usuario"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:id="@+id/et_nombre"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="14sp" />
+        <TextView
+            android:text="Nombres:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:layout_alignBaseline="@+id/et_nombre"
+            android:layout_alignBottom="@+id/et_nombre"
+            android:layout_alignLeft="@+id/tvUsuario"
+            android:layout_alignStart="@+id/tvUsuario" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Apellidos"
+            android:ems="10"
+            android:id="@+id/et_apellidos"
+            android:layout_below="@+id/et_nombre"
+            android:layout_alignLeft="@+id/et_nombre"
+            android:focusable="true"
+            android:cursorVisible="true"
+            android:layout_alignStart="@+id/et_nombre"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="14sp" />
+
+        <TextView
+            android:text="Email:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6"
+            android:layout_alignBaseline="@+id/et_email"
+            android:layout_alignBottom="@+id/et_email"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4" />
+
+        <TextView
+            android:text="Apellidos:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
+            android:layout_alignBaseline="@+id/et_apellidos"
+            android:layout_alignBottom="@+id/et_apellidos"
+            android:layout_toLeftOf="@+id/et_nombre"
+            android:layout_toStartOf="@+id/et_nombre" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Email"
+            android:ems="10"
+            android:id="@+id/et_email"
+            android:layout_below="@+id/et_apellidos"
+            android:layout_alignLeft="@+id/et_apellidos"
+            android:layout_alignStart="@+id/et_apellidos"
+            android:focusable="true"
+            android:cursorVisible="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="14sp" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/edit"
+            android:id="@+id/btn_editar_datos_personales"
+            android:layout_below="@+id/et_email"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="editarDatos" />
+
+        <TextView
+            android:text="Acerca de ti:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7"
+            android:layout_below="@+id/btn_editar_datos_personales"
+            android:layout_alignLeft="@+id/textView6"
+            android:layout_alignStart="@+id/textView6" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/edit"
+            android:id="@+id/btn_editar_acerca_de_ti"
+            android:onClick="editarAcercaDeTi"
+            android:layout_marginTop="80dp"
+            android:layout_below="@+id/textView7"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/et_acercaDeTi"
+            android:text="Escriba informacion acerca de usted"
+            android:focusable="true"
+            android:cursorVisible="true"
+            android:textSize="14sp"
+            android:layout_below="@+id/textView7"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="17dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+</ScrollView>
