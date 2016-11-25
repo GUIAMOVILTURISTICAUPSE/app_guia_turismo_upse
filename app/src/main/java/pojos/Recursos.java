@@ -9,44 +9,53 @@ import java.util.ArrayList;
 public class Recursos {
 
     //Campos para couchdb
+    //Campos para couchdb
     private String _id;
 
 
     private String _rev;
-    //id
     private String nombre;
     private String descripcion;
     private String informacionGeneral;
     private String direccion;
     private ArrayList<Costo> costoRecursos = new ArrayList<Costo>();
+    private ArrayList<AccesibilidadRecurso> opcionesAccesibilidad = new ArrayList<AccesibilidadRecurso>();
     private ArrayList<Facilidad> facilidadRecurso = new ArrayList<Facilidad>();
     private ArrayList<Recomendacion> recomendacion = new ArrayList<Recomendacion>();
-    //informacion contacto
-    private ArrayList<Imagen> imagen = new ArrayList<Imagen>();
-    private ArrayList<Senderos> sendero = new ArrayList<Senderos>();
-    //posicion
-    //estado
-    private ArrayList<Idiomas> idiomasInformac = new ArrayList<Idiomas>();
+    private Contacto infContacto;
     private float ranking;
+    private ArrayList<Imagen> galeria = new ArrayList<Imagen>();
+    private Imagen imagenPrinc;
+    private ArrayList<Senderos> sendero = new ArrayList<Senderos>();
+    private String posicion;
+    private Estado estado;
+    private ArrayList<Idiomas> idiomasInformac = new ArrayList<Idiomas>();
+    private ArrayList<String> preguntasFrecuentes = new ArrayList<String>();
+    private ArrayList<Comentario> comentarios = new ArrayList<Comentario>();
 
-    //constructor
 
+    //constructor por defecto
     public Recursos(){
 
     }
 
-    public Recursos(String nombre, String descripcion, String informacionGeneral, String direccion, ArrayList<Costo> costoRecursos, ArrayList<Facilidad> facilidadRecurso, ArrayList<Recomendacion> recomendacion, ArrayList<Imagen> imagen, ArrayList<Senderos> sendero, ArrayList<Idiomas> idiomasInformac, float ranking) {
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.informacionGeneral = informacionGeneral;
-        this.direccion = direccion;
-        this.costoRecursos = costoRecursos;
-        this.facilidadRecurso = facilidadRecurso;
-        this.recomendacion = recomendacion;
-        this.imagen = imagen;
-        this.sendero = sendero;
-        this.idiomasInformac = idiomasInformac;
-        this.ranking = ranking;
+    //getters and setters
+
+
+    public String get_id() {
+        return _id;
+    }
+
+    public void set_id(String _id) {
+        this._id = _id;
+    }
+
+    public String get_rev() {
+        return _rev;
+    }
+
+    public void set_rev(String _rev) {
+        this._rev = _rev;
     }
 
     public String getNombre() {
@@ -89,6 +98,14 @@ public class Recursos {
         this.costoRecursos = costoRecursos;
     }
 
+    public ArrayList<AccesibilidadRecurso> getOpcionesAccesibilidad() {
+        return opcionesAccesibilidad;
+    }
+
+    public void setOpcionesAccesibilidad(ArrayList<AccesibilidadRecurso> opcionesAccesibilidad) {
+        this.opcionesAccesibilidad = opcionesAccesibilidad;
+    }
+
     public ArrayList<Facilidad> getFacilidadRecurso() {
         return facilidadRecurso;
     }
@@ -105,28 +122,12 @@ public class Recursos {
         this.recomendacion = recomendacion;
     }
 
-    public ArrayList<Imagen> getImagen() {
-        return imagen;
+    public Contacto getInfContacto() {
+        return infContacto;
     }
 
-    public void setImagen(ArrayList<Imagen> imagen) {
-        this.imagen = imagen;
-    }
-
-    public ArrayList<Senderos> getSendero() {
-        return sendero;
-    }
-
-    public void setSendero(ArrayList<Senderos> sendero) {
-        this.sendero = sendero;
-    }
-
-    public ArrayList<Idiomas> getIdiomasInformac() {
-        return idiomasInformac;
-    }
-
-    public void setIdiomasInformac(ArrayList<Idiomas> idiomasInformac) {
-        this.idiomasInformac = idiomasInformac;
+    public void setInfContacto(Contacto infContacto) {
+        this.infContacto = infContacto;
     }
 
     public float getRanking() {
@@ -137,7 +138,74 @@ public class Recursos {
         this.ranking = ranking;
     }
 
+    public ArrayList<Imagen> getGaleria() {
+        return galeria;
+    }
+
+    public void setGaleria(ArrayList<Imagen> galeria) {
+        this.galeria = galeria;
+    }
+
+    public Imagen getImagenPrinc() {
+        return imagenPrinc;
+    }
+
+    public void setImagenPrinc(Imagen imagenPrinc) {
+        this.imagenPrinc = imagenPrinc;
+    }
+
+    public ArrayList<Senderos> getSendero() {
+        return sendero;
+    }
+
+    public void setSendero(ArrayList<Senderos> sendero) {
+        this.sendero = sendero;
+    }
+
+    public String getPosicion() {
+        return posicion;
+    }
+
+    public void setPosicion(String posicion) {
+        this.posicion = posicion;
+    }
+
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
+
+    public ArrayList<Idiomas> getIdiomasInformac() {
+        return idiomasInformac;
+    }
+
+    public void setIdiomasInformac(ArrayList<Idiomas> idiomasInformac) {
+        this.idiomasInformac = idiomasInformac;
+    }
+
+    public ArrayList<String> getPreguntasFrecuentes() {
+        return preguntasFrecuentes;
+    }
+
+    public void setPreguntasFrecuentes(ArrayList<String> preguntasFrecuentes) {
+        this.preguntasFrecuentes = preguntasFrecuentes;
+    }
+
+    public ArrayList<Comentario> getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(ArrayList<Comentario> comentarios) {
+        this.comentarios = comentarios;
+    }
+
     //otros metodos
+    public void obtenerRuta( String posicion){
+
+    }
 
     public void verReviews(){
     }
@@ -145,42 +213,29 @@ public class Recursos {
     public void llamarContacto(){
     }
 
-    public void calcularRanking(){
+    public void calcularRankingTotal(){
 
     }
 
-    public String get_id() {
-        return _id;
+    public void agregarImagen(){
     }
 
-    public void set_id(String _id) {
-        this._id = _id;
+    public void reportarMalaUbicacion(){
     }
 
-    public String get_rev() {
-        return _rev;
-    }
+    public void agregarRecomendacion(){
 
-    public void set_rev(String _rev) {
-        this._rev = _rev;
     }
+    public void verSenderos(){
 
-    @Override
-    public String toString() {
-        return "Recursos{" +
-                "_id='" + _id + '\'' +
-                ", _rev='" + _rev + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", descripcion='" + descripcion + '\'' +
-                ", informacionGeneral='" + informacionGeneral + '\'' +
-                ", direccion='" + direccion + '\'' +
-                ", costoRecursos=" + costoRecursos +
-                ", facilidadRecurso=" + facilidadRecurso +
-                ", recomendacion=" + recomendacion +
-                ", imagen=" + imagen +
-                ", sendero=" + sendero +
-                ", idiomasInformac=" + idiomasInformac +
-                ", ranking=" + ranking +
-                '}';
+    }
+    public void verGaleria(){
+
+    }
+    public void comentar(){
+
+    }
+    public void sugerirCambio(){
+
     }
 }

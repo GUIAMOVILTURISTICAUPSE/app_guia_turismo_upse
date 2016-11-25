@@ -1,7 +1,10 @@
 package pojos;
 
 /**
- * Created by evelyn on 18/11/2016.
+ * Created by BYRONALEXIS on 11/25/2016.
  */
-public class Idiomas {
+
+public enum Idiomas {
+    ESPAÑOL, INGLES, FRANCES, CHINO, ALEMAN, ITALIANO, PORTUGUES, KOREANO, JAPONES,
+    ARABE, QUECHUA;
 }
