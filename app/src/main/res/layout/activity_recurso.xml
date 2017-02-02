@@ -41,76 +41,6 @@
         android:rating="4"
         android:stepSize="0" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_help"
-        android:id="@+id/img_Pregunas"
-        android:elevation="4dp"
-        android:layout_alignTop="@+id/img_Contactar"
-        android:layout_toRightOf="@+id/img_Senderos"
-        android:layout_toEndOf="@+id/img_Senderos"
-        android:onClick="btnPreguntas" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_dialog_info"
-        android:id="@+id/img_informacion"
-        android:layout_alignTop="@+id/img_Pregunas"
-        android:layout_toRightOf="@+id/img_Pregunas"
-        android:layout_toEndOf="@+id/img_Pregunas"
-        android:elevation="4dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_directions"
-        android:id="@+id/img_Senderos"
-        android:elevation="4dp"
-        android:layout_alignTop="@+id/img_Pregunas"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:text="Buscar lugares: "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_buscarLugares"
-        android:layout_alignBaseline="@+id/btn_cercanos"
-        android:layout_alignBottom="@+id/btn_cercanos"
-        android:layout_alignLeft="@+id/scroll_mejoresComentarios"
-        android:layout_alignStart="@+id/scroll_mejoresComentarios" />
-
-    <Button
-        android:text="SIMILARES"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_similares"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/scroll_mejoresComentarios"
-        android:layout_alignEnd="@+id/scroll_mejoresComentarios"
-        android:elevation="4dp" />
-
-    <Button
-        android:text="CERCANOS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_cercanos"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/img_ubicacion"
-        android:layout_toEndOf="@+id/img_ubicacion"
-        android:elevation="4dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/sym_action_call"
-        android:id="@+id/img_Contactar"
-        android:elevation="4dp"
-        android:layout_above="@+id/scroll_mejoresComentarios"
-        android:layout_toLeftOf="@+id/img_ubicacion"
-        android:layout_toStartOf="@+id/img_ubicacion" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -153,16 +83,6 @@
         android:layout_alignBottom="@+id/tv_dist"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_myplaces"
-        android:id="@+id/img_ubicacion"
-        android:elevation="4dp"
-        android:layout_alignTop="@+id/img_Senderos"
-        android:layout_toLeftOf="@+id/img_Senderos"
-        android:layout_toStartOf="@+id/img_Senderos" />
 
     <TextView
         android:text="Distancia:"
@@ -215,14 +135,89 @@
         android:layout_toRightOf="@+id/img_usuario"
         android:layout_toEndOf="@+id/img_usuario" />
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_dialog_info"
+        android:id="@+id/img_informacion"
+        android:elevation="4dp"
+        android:layout_alignTop="@+id/img_Contactar"
+        android:layout_toLeftOf="@+id/tv_detalle_dist"
+        android:layout_toStartOf="@+id/tv_detalle_dist" />
+
+    <Button
+        android:text="CERCANOS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_cercanos"
+        android:elevation="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/rtb_calificacion" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/sym_action_call"
+        android:id="@+id/img_Contactar"
+        android:elevation="4dp"
+        android:layout_above="@+id/scroll_mejoresComentarios"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_myplaces"
+        android:id="@+id/img_ubicacion"
+        android:elevation="4dp"
+        android:layout_alignTop="@+id/img_Contactar"
+        android:layout_alignRight="@+id/tv_usuario"
+        android:layout_alignEnd="@+id/tv_usuario" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_directions"
+        android:id="@+id/img_Senderos"
+        android:elevation="4dp"
+        android:layout_above="@+id/scroll_mejoresComentarios"
+        android:layout_toLeftOf="@+id/tv_dist"
+        android:layout_toStartOf="@+id/tv_dist" />
+
+    <Button
+        android:text="SENDEROS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_senderos"
+        android:elevation="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/img_ubicacion"
+        android:layout_alignStart="@+id/img_ubicacion"
+        android:layout_alignRight="@+id/tv_detalle_direccion"
+        android:layout_alignEnd="@+id/tv_detalle_direccion" />
+
+    <Button
+        android:text="galeria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_galeria"
+        android:elevation="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="irg" />
+
     <ScrollView
         android:layout_height="100sp"
         android:layout_width="250sp"
         android:id="@+id/scroll_descripcion"
         android:scrollbarStyle="outsideInset"
-        android:layout_below="@+id/layout_imagenes"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/tv_direccion">
+        android:layout_above="@+id/img_Senderos"
+        android:layout_toRightOf="@+id/img_usuario"
+        android:layout_toEndOf="@+id/img_usuario"
+        android:onClick="base64">
 
 
         <TextView
@@ -232,5 +227,16 @@
             android:id="@+id/tv_descrip_recurso"
             android:textSize="12sp" />
     </ScrollView>
+
+    <Button
+        android:text="BASE64"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_similares"
+        android:elevation="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="base " />
 
 </RelativeLayout>

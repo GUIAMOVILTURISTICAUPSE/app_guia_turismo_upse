@@ -102,8 +102,7 @@
         android:id="@+id/b_recursosAnimados"
         android:onClick="recursosAnimados"
         android:layout_alignBottom="@+id/galeria"
-        android:layout_toRightOf="@+id/b_comentarios"
-        android:textSize="12sp" />
+        android:layout_toRightOf="@+id/b_comentarios" />
 
     <Button
         android:text="GALERIA"
